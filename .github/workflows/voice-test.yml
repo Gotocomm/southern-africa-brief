@@ -1,0 +1,31 @@
+name: Voice test
+
+# Run by hand from the Actions tab. Makes a short sample with the configured voice
+# and attaches it to the run as a download. Nothing is published.
+on:
+  workflow_dispatch:
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r tools/requirements.txt
+      - name: Make a sample
+        run: |
+          python3 - <<'EOF'
+          import sys; sys.path.insert(0, "tools")
+          from pathlib import Path
+          import build
+          text = ("Good morning. This is The Southern Africa Brief, a test of the voice. "
+                  "Unemployment among young people aged 15 to 24 stands at more than 60 percent. "
+                  "Namela keeps a free list of verified bursaries at opportunities dot namela dot org.")
+          print("voice used:", build.synthesise(text, Path("voice-sample.mp3")))
+          EOF
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voice-sample
+          path: voice-sample.mp3
