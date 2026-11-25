@@ -108,7 +108,7 @@ def build_feed(eps):
     for ep in eps:
         m, mp3 = ep["meta"], AUDIO / f"{ep['meta']['date']}.mp3"
         pub = dt.datetime.fromisoformat(m["date"]).replace(hour=6, tzinfo=SAST)
-        notes = f"<p>{escape(m['description'])}</p><p>This episode is voiced by AI and written with AI research, reviewed by Lethabo Machabaphala.</p>"
+        notes = f"<p>{escape(m['description'])}</p><p>This episode is researched and written with AI for Namela Development Institute, and voiced by AI.</p>"
         if ep["sources"]:
             notes += "<p>Sources:</p><ul>" + "".join(
                 f'<li><a href="{escape(u)}">{escape(t)}</a></li>' for t, u in ep["sources"]) + "</ul>"
