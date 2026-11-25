@@ -1,0 +1,16 @@
+{
+  "title": "The Southern Africa Brief",
+  "author": "Lethabo Machabaphala, Namela Development Institute",
+  "owner_name": "Namela Development Institute",
+  "owner_email": "admin@namela.org",
+  "description": "A short weekday bulletin on education, youth employment and skills, gender equality and digital inclusion in Southern Africa, with a longer Monday Brief. Written with AI research, voiced by AI and reviewed by Lethabo Machabaphala for Namela Development Institute.",
+  "language": "en-za",
+  "category": "News",
+  "subcategory": "Daily News",
+  "explicit": false,
+  "site_url": "https://gotocomm.github.io/southern-africa-brief/",
+  "voice": "en-ZA-LeahNeural",
+  "voice_rate": "+0%",
+  "fallback_voice_tld": "co.za",
+  "auto_publish": true
+}

@@ -1,0 +1,63 @@
+name: Publish episode
+
+on:
+  push:
+    branches: [main]
+    paths: ["episodes/**", "podcast.json", "cover.jpg", "tools/**", ".github/workflows/publish.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the voice tools
+        run: pip install -r tools/requirements.txt
+
+      - name: Make audio and rebuild the feed
+        run: |
+          set +e
+          python3 tools/build.py
+          code=$?
+          if [ $code -ne 0 ]; then echo "BUILD_FAILED=$code" >> "$GITHUB_ENV"; fi
+          if [ $code -ne 0 ] && [ $code -ne 3 ]; then exit $code; fi
+
+      - name: Save new audio to the repository
+        run: |
+          git config user.name "Southern Africa Brief"
+          git config user.email "admin@namela.org"
+          git add site/audio
+          if ! git diff --cached --quiet; then
+            git commit -m "Audio for $(date -u +%F) [skip ci]"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Report scripts that could not be published
+        if: env.BUILD_FAILED != ''
+        run: |
+          echo "One or more episode scripts failed the checks. See the 'Make audio' step above." >&2
+          exit 1

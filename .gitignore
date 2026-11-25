@@ -1,0 +1,5 @@
+site/feed.xml
+site/index.html
+site/cover.jpg
+__pycache__/
+*.part.mp3
