@@ -37,7 +37,7 @@ def parse(path):
         raise ValueError("missing a '## Script' section")
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta.get("date", "")):
         raise ValueError("date must be YYYY-MM-DD")
-    if meta["date"] != path.stem:
+    if not re.fullmatch(re.escape(meta["date"]) + r"(-v\d+)?", path.stem):
         raise ValueError(f"date {meta['date']} does not match the file name")
     for k in ("title", "description"):
         if not meta.get(k):
@@ -47,7 +47,7 @@ def parse(path):
     if not MIN_WORDS <= words <= MAX_WORDS:
         raise ValueError(f"script is {words} words; expected {MIN_WORDS} to {MAX_WORDS}")
     sources = re.findall(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", sections.get("sources", ""))
-    return {"meta": meta, "spoken": spoken, "words": words, "sources": sources, "path": path}
+    return {"slug": path.stem, "meta": meta, "spoken": spoken, "words": words, "sources": sources, "path": path}
 
 
 def spoken_text(script):
@@ -106,7 +106,7 @@ def build_feed(eps):
     now = format_datetime(dt.datetime.now(SAST))
     items = []
     for ep in eps:
-        m, mp3 = ep["meta"], AUDIO / f"{ep['meta']['date']}.mp3"
+        m, mp3 = ep["meta"], AUDIO / f"{ep['slug']}.mp3"
         pub = dt.datetime.fromisoformat(m["date"]).replace(hour=6, tzinfo=SAST)
         notes = f"<p>{escape(m['description'])}</p><p>This episode is researched and written with AI for Namela Development Institute, and voiced by AI.</p>"
         if ep["sources"]:
@@ -117,8 +117,8 @@ def build_feed(eps):
       <description><![CDATA[{notes}]]></description>
       <itunes:summary>{escape(m['description'])}</itunes:summary>
       <pubDate>{format_datetime(pub)}</pubDate>
-      <guid isPermaLink="false">{escape(base)}episodes/{m['date']}</guid>
-      <enclosure url="{escape(base)}audio/{m['date']}.mp3" length="{mp3.stat().st_size}" type="audio/mpeg"/>
+      <guid isPermaLink="false">{escape(base)}episodes/{ep['slug']}</guid>
+      <enclosure url="{escape(base)}audio/{ep['slug']}.mp3" length="{mp3.stat().st_size}" type="audio/mpeg"/>
       <itunes:duration>{hms(ep['seconds'])}</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>false</itunes:explicit>
@@ -152,7 +152,7 @@ def build_page(eps):
     <article>
       <h2>{html.escape(e['meta']['title'])}</h2>
       <p>{html.escape(e['meta']['description'])}</p>
-      <audio controls preload="none" src="audio/{e['meta']['date']}.mp3"></audio>
+      <audio controls preload="none" src="audio/{e['slug']}.mp3"></audio>
       {'<details><summary>Sources</summary><ul>' + ''.join(f'<li><a href="{html.escape(u)}">{html.escape(t)}</a></li>' for t, u in e['sources']) + '</ul></details>' if e['sources'] else ''}
     </article>""" for e in eps)
     page = f"""<!DOCTYPE html>
@@ -188,7 +188,7 @@ def main():
         if not publishable(ep):
             print(f"{path.name}: not published (status {ep['meta'].get('status')})")
             continue
-        mp3 = AUDIO / f"{ep['meta']['date']}.mp3"
+        mp3 = AUDIO / f"{ep['slug']}.mp3"
         if not mp3.exists():
             if not make_audio:
                 print(f"{path.name}: valid, {ep['words']} words, audio not made (--no-audio)")
@@ -197,7 +197,7 @@ def main():
             print("  voice used:", synthesise(ep["spoken"], mp3))
         ep["seconds"] = duration(mp3)
         eps.append(ep)
-    eps.sort(key=lambda e: e["meta"]["date"], reverse=True)
+    eps.sort(key=lambda e: e["slug"], reverse=True)
     build_feed(eps)
     build_page(eps)
     print(f"Feed built with {len(eps)} episode(s).")
