@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Southern Africa Brief</title>
+    <link>https://gotocomm.github.io/southern-africa-brief/</link>
+    <atom:link href="https://gotocomm.github.io/southern-africa-brief/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>A short weekday bulletin on education, youth employment and skills, gender equality and digital inclusion in Southern Africa, with a longer Monday Brief. Researched and written with AI for Namela Development Institute, and voiced by AI.</description>
+    <language>en-za</language>
+    <lastBuildDate>Fri, 27 Nov 2026 06:18:14 +0200</lastBuildDate>
+    <itunes:author>Namela Development Institute</itunes:author>
+    <itunes:summary>A short weekday bulletin on education, youth employment and skills, gender equality and digital inclusion in Southern Africa, with a longer Monday Brief. Researched and written with AI for Namela Development Institute, and voiced by AI.</itunes:summary>
+    <itunes:owner><itunes:name>Namela Development Institute</itunes:name><itunes:email>admin@namela.org</itunes:email></itunes:owner>
+    <itunes:image href="https://gotocomm.github.io/southern-africa-brief/cover.jpg"/>
+    <image><url>https://gotocomm.github.io/southern-africa-brief/cover.jpg</url><title>The Southern Africa Brief</title><link>https://gotocomm.github.io/southern-africa-brief/</link></image>
+    <itunes:category text="News"><itunes:category text="Daily News"/></itunes:category>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <item>
+      <title>The Southern Africa Brief: Friday 27 November 2026</title>
+      <description><![CDATA[<p>A new Sexual Offences Court opens in Khayelitsha with support services for survivors, and a new media training academy aimed at young people and women is launched in Johannesburg. Plus a government call to extend children's rights and safety into the digital world.</p><p>This episode is researched and written with AI for Namela Development Institute, and voiced by AI.</p><p>Sources:</p><ul><li><a href="https://www.sanews.gov.za/south-africa/nel-urges-men-speak-out-against-gbvf-and-child-abuse">Nel urges men to speak out against GBVF and child abuse, SAnews</a></li><li><a href="https://www.sanews.gov.za/south-africa/safe-space-seek-justice-khayelitsha-court-puts-survivors-dignity-first">A safe space to seek justice: Khayelitsha court puts survivors' dignity first, SAnews</a></li><li><a href="https://www.sanews.gov.za/south-africa/r959m-project-train-kzn-youth-job-ready-skills">R95.9m project to train KZN youth in job-ready skills, SAnews (Gender-Based Violence Command Centre number)</a></li><li><a href="https://www.sanews.gov.za/south-africa/president-ramaphosa-officiate-launch-canal-academy">President Ramaphosa to officiate launch of CANAL+ Academy, SAnews</a></li><li><a href="https://www.sanews.gov.za/south-africa/childrens-rights-and-safety-must-extend-digital-world">Children's rights and safety must extend into the digital world, SAnews</a></li></ul>]]></description>
+      <itunes:summary>A new Sexual Offences Court opens in Khayelitsha with support services for survivors, and a new media training academy aimed at young people and women is launched in Johannesburg. Plus a government call to extend children's rights and safety into the digital world.</itunes:summary>
+      <pubDate>Fri, 27 Nov 2026 06:00:00 +0200</pubDate>
+      <guid isPermaLink="false">https://gotocomm.github.io/southern-africa-brief/episodes/2026-11-27</guid>
+      <enclosure url="https://gotocomm.github.io/southern-africa-brief/audio/2026-11-27.mp3" length="1731024" type="audio/mpeg"/>
+      <itunes:duration>00:04:49</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The Southern Africa Brief: Thursday 26 November 2026, v2</title>
+      <description><![CDATA[<p>The South African Child Gauge 2026 warns that progress for children is stalling, with far fewer babies receiving the Child Support Grant, and final 2026 allowances for TVET college students funded by NSFAS have been delayed. Plus a call for state-owned companies to open their doors to young job seekers, and a Human Rights Commission report on the state of South Africa's public schools.</p><p>This episode is researched and written with AI for Namela Development Institute, and voiced by AI.</p><p>Sources:</p><ul><li><a href="https://www.dailymaverick.co.za/article/2026-11-25-austerity-and-falling-grant-uptake-threaten-30-years-of-progress-for-sas-children/">Austerity and falling grant uptake threaten 30 years of progress for SA's children, Daily Maverick</a></li><li><a href="https://www.sundaytimes.timeslive.co.za/news/2026-11-24-millions-of-sa-children-trapped-in-poverty-as-progress-on-their-wellbeing-stalls/">Millions of SA children trapped in poverty as progress on their wellbeing stalls, Sunday Times</a></li><li><a href="https://www.sanews.gov.za/south-africa/nsfas-board-approves-budget-reallocation-outstanding-tvet-allowances">NSFAS Board approves budget reallocation for outstanding TVET allowances, SAnews</a></li><li><a href="https://www.sanews.gov.za/south-africa/chikunga-calls-state-led-investment-tackle-youth-unemployment">Chikunga calls for State-led investment to tackle youth unemployment, SAnews</a></li><li><a href="https://www.sowetan.co.za/news/2026-11-23-five-things-to-know-about-state-of-sa-schools-in-sahrcs-2026-report">Five things to know about state of SA schools in SAHRC's 2026 report, Sowetan</a></li></ul>]]></description>
+      <itunes:summary>The South African Child Gauge 2026 warns that progress for children is stalling, with far fewer babies receiving the Child Support Grant, and final 2026 allowances for TVET college students funded by NSFAS have been delayed. Plus a call for state-owned companies to open their doors to young job seekers, and a Human Rights Commission report on the state of South Africa's public schools.</itunes:summary>
+      <pubDate>Thu, 26 Nov 2026 06:00:00 +0200</pubDate>
+      <guid isPermaLink="false">https://gotocomm.github.io/southern-africa-brief/episodes/2026-11-26-v2</guid>
+      <enclosure url="https://gotocomm.github.io/southern-africa-brief/audio/2026-11-26-v2.mp3" length="2360880" type="audio/mpeg"/>
+      <itunes:duration>00:06:33</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>The Southern Africa Brief: Wednesday 25 November 2026</title>
+      <description><![CDATA[<p>The 16 Days of Activism for No Violence Against Women and Children begins today, and the Class of 2026 writes its last matric papers as marking preparations start. Plus a new GSMA index shows most Africans covered by mobile broadband still do not use it, and what South Africa's cheaper smartphones have changed.</p><p>This episode is researched and written with AI for Namela Development Institute, and voiced by AI.</p><p>Sources:</p><ul><li><a href="https://www.gov.za/16DaysOfActivism2026">16 Days of Activism 2026, South African Government</a></li><li><a href="https://www.gov.za/news/media-advisories/government-activities/acting-president-paul-mashatile-addresses-launch-16">Acting President Paul Mashatile addresses launch of 16 Days of Activism, South African Government</a></li><li><a href="https://www.sanews.gov.za/south-africa/social-development-urges-vigilance-gbv-command-centre-calls-surge">Social Development urges vigilance as GBV command centre calls surge, SAnews</a></li><li><a href="https://www.gov.za/news/media-statements/basic-education-reached-90-milestone-administration-2026-national-senior">Basic Education reached the 90 percent milestone in the administration of the 2026 NSC, South African Government</a></li><li><a href="https://www.sanews.gov.za/south-africa/dbe-urges-class-2026-finish-exams-integrity">DBE urges Class of 2026 to finish exams with integrity, SAnews</a></li><li><a href="https://www.sanews.gov.za/south-africa/nearly-one-million-candidates-registered-2026-matric-exams">Nearly one million candidates registered for 2026 matric exams, SAnews</a></li><li><a href="https://www.gsma.com/newsroom/press-release/africas-digital-progress-accelerates-but-64-usage-gap-shows-next-challenge-for-policymakers/">Africa's Digital Progress Accelerates, but 64% Usage Gap Shows Next Challenge for Policymakers, GSMA</a></li></ul>]]></description>
+      <itunes:summary>The 16 Days of Activism for No Violence Against Women and Children begins today, and the Class of 2026 writes its last matric papers as marking preparations start. Plus a new GSMA index shows most Africans covered by mobile broadband still do not use it, and what South Africa's cheaper smartphones have changed.</itunes:summary>
+      <pubDate>Wed, 25 Nov 2026 06:00:00 +0200</pubDate>
+      <guid isPermaLink="false">https://gotocomm.github.io/southern-africa-brief/episodes/2026-11-25</guid>
+      <enclosure url="https://gotocomm.github.io/southern-africa-brief/audio/2026-11-25.mp3" length="1739808" type="audio/mpeg"/>
+      <itunes:duration>00:04:50</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
